@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352A9BDDDD77660DC8B3CEAF /* Pods_FormIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4583BD52B1A132A494303D6 /* Pods_FormIOS.framework */; };
 		4E65108E25AE862D00F09093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65108D25AE862D00F09093 /* AppDelegate.swift */; };
 		4E65109025AE862D00F09093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65108F25AE862D00F09093 /* SceneDelegate.swift */; };
-		4E65109225AE862D00F09093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65109125AE862D00F09093 /* ViewController.swift */; };
 		4E65109525AE862D00F09093 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E65109325AE862D00F09093 /* Main.storyboard */; };
 		4E65109725AE862E00F09093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E65109625AE862E00F09093 /* Assets.xcassets */; };
 		4E65109A25AE862E00F09093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E65109825AE862E00F09093 /* LaunchScreen.storyboard */; };
@@ -35,10 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		254055670139884C8568B37A /* Pods-FormIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormIOS.debug.xcconfig"; path = "Target Support Files/Pods-FormIOS/Pods-FormIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		4E65108A25AE862D00F09093 /* FormIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E65108D25AE862D00F09093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E65108F25AE862D00F09093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E65109125AE862D00F09093 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E65109425AE862D00F09093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E65109625AE862E00F09093 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E65109925AE862E00F09093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		4E6510AB25AE862E00F09093 /* FormIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6510AF25AE862E00F09093 /* FormIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormIOSUITests.swift; sourceTree = "<group>"; };
 		4E6510B125AE862E00F09093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99B9389ED81074C00DAF6FCF /* Pods-FormIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormIOS.release.xcconfig"; path = "Target Support Files/Pods-FormIOS/Pods-FormIOS.release.xcconfig"; sourceTree = "<group>"; };
+		C4583BD52B1A132A494303D6 /* Pods_FormIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352A9BDDDD77660DC8B3CEAF /* Pods_FormIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0660CBA83FC9B5734CCDFE1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				254055670139884C8568B37A /* Pods-FormIOS.debug.xcconfig */,
+				99B9389ED81074C00DAF6FCF /* Pods-FormIOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4E65108125AE862D00F09093 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +95,8 @@
 				4E6510A325AE862E00F09093 /* FormIOSTests */,
 				4E6510AE25AE862E00F09093 /* FormIOSUITests */,
 				4E65108B25AE862D00F09093 /* Products */,
+				0660CBA83FC9B5734CCDFE1C /* Pods */,
+				C4509AAE9F833902EE5AF5CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +113,11 @@
 		4E65108C25AE862D00F09093 /* FormIOS */ = {
 			isa = PBXGroup;
 			children = (
-				4E65108D25AE862D00F09093 /* AppDelegate.swift */,
-				4E65108F25AE862D00F09093 /* SceneDelegate.swift */,
-				4E65109125AE862D00F09093 /* ViewController.swift */,
-				4E65109325AE862D00F09093 /* Main.storyboard */,
-				4E65109625AE862E00F09093 /* Assets.xcassets */,
-				4E65109825AE862E00F09093 /* LaunchScreen.storyboard */,
+				4E6510C225AE876D00F09093 /* Controllers */,
+				4E6510C025AE874200F09093 /* Library */,
+				4E6510C125AE876200F09093 /* Models */,
+				4E6510C325AE878400F09093 /* Utils */,
+				4E6510C425AE878C00F09093 /* Views */,
 				4E65109B25AE862E00F09093 /* Info.plist */,
 			);
 			path = FormIOS;
@@ -128,6 +141,54 @@
 			path = FormIOSUITests;
 			sourceTree = "<group>";
 		};
+		4E6510C025AE874200F09093 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				4E65108D25AE862D00F09093 /* AppDelegate.swift */,
+				4E65108F25AE862D00F09093 /* SceneDelegate.swift */,
+				4E65109625AE862E00F09093 /* Assets.xcassets */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		4E6510C125AE876200F09093 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4E6510C225AE876D00F09093 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4E6510C325AE878400F09093 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4E6510C425AE878C00F09093 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E65109325AE862D00F09093 /* Main.storyboard */,
+				4E65109825AE862E00F09093 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C4509AAE9F833902EE5AF5CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4583BD52B1A132A494303D6 /* Pods_FormIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E6510B425AE862E00F09093 /* Build configuration list for PBXNativeTarget "FormIOS" */;
 			buildPhases = (
+				34B9C2893C944D8EBB8F625B /* [CP] Check Pods Manifest.lock */,
 				4E65108625AE862D00F09093 /* Sources */,
 				4E65108725AE862D00F09093 /* Frameworks */,
 				4E65108825AE862D00F09093 /* Resources */,
+				09617BA43504E7B1DC691D28 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,12 +316,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09617BA43504E7B1DC691D28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FormIOS/Pods-FormIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FormIOS/Pods-FormIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FormIOS/Pods-FormIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34B9C2893C944D8EBB8F625B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FormIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4E65108625AE862D00F09093 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E65109225AE862D00F09093 /* ViewController.swift in Sources */,
 				4E65108E25AE862D00F09093 /* AppDelegate.swift in Sources */,
 				4E65109025AE862D00F09093 /* SceneDelegate.swift in Sources */,
 			);
@@ -433,11 +537,13 @@
 		};
 		4E6510B525AE862E00F09093 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 254055670139884C8568B37A /* Pods-FormIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FormIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,11 +557,13 @@
 		};
 		4E6510B625AE862E00F09093 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99B9389ED81074C00DAF6FCF /* Pods-FormIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FormIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
