@@ -15,6 +15,12 @@
 		4E65109A25AE862E00F09093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E65109825AE862E00F09093 /* LaunchScreen.storyboard */; };
 		4E6510A525AE862E00F09093 /* FormIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6510A425AE862E00F09093 /* FormIOSTests.swift */; };
 		4E6510B025AE862E00F09093 /* FormIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6510AF25AE862E00F09093 /* FormIOSUITests.swift */; };
+		4E65115E25AEA0BD00F09093 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65115D25AEA0BD00F09093 /* User.swift */; };
+		4E65116325B0035800F09093 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65116225B0035800F09093 /* FormViewController.swift */; };
+		4E65116825B007EB00F09093 /* MDCUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65116725B007EB00F09093 /* MDCUtils.swift */; };
+		4E6511B425B12E1800F09093 /* ProgressDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6511B325B12E1800F09093 /* ProgressDialogViewController.swift */; };
+		4E6511B925B12E3600F09093 /* Commons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6511B825B12E3600F09093 /* Commons.storyboard */; };
+		4E6511C125B1367200F09093 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6511C025B1367200F09093 /* UIUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		4E6510AB25AE862E00F09093 /* FormIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6510AF25AE862E00F09093 /* FormIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormIOSUITests.swift; sourceTree = "<group>"; };
 		4E6510B125AE862E00F09093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E65115D25AEA0BD00F09093 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4E65116225B0035800F09093 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		4E65116725B007EB00F09093 /* MDCUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCUtils.swift; sourceTree = "<group>"; };
+		4E6511B325B12E1800F09093 /* ProgressDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDialogViewController.swift; sourceTree = "<group>"; };
+		4E6511B825B12E3600F09093 /* Commons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Commons.storyboard; sourceTree = "<group>"; };
+		4E6511C025B1367200F09093 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		99B9389ED81074C00DAF6FCF /* Pods-FormIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormIOS.release.xcconfig"; path = "Target Support Files/Pods-FormIOS/Pods-FormIOS.release.xcconfig"; sourceTree = "<group>"; };
 		C4583BD52B1A132A494303D6 /* Pods_FormIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -154,6 +166,7 @@
 		4E6510C125AE876200F09093 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4E65115D25AEA0BD00F09093 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +174,8 @@
 		4E6510C225AE876D00F09093 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E6511B225B12DCB00F09093 /* Commons */,
+				4E6511B125B12DC400F09093 /* Main */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +183,8 @@
 		4E6510C325AE878400F09093 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4E65116725B007EB00F09093 /* MDCUtils.swift */,
+				4E6511C025B1367200F09093 /* UIUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -177,8 +194,25 @@
 			children = (
 				4E65109325AE862D00F09093 /* Main.storyboard */,
 				4E65109825AE862E00F09093 /* LaunchScreen.storyboard */,
+				4E6511B825B12E3600F09093 /* Commons.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4E6511B125B12DC400F09093 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4E65116225B0035800F09093 /* FormViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4E6511B225B12DCB00F09093 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				4E6511B325B12E1800F09093 /* ProgressDialogViewController.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		C4509AAE9F833902EE5AF5CA /* Frameworks */ = {
@@ -295,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E65109A25AE862E00F09093 /* LaunchScreen.storyboard in Resources */,
+				4E6511B925B12E3600F09093 /* Commons.storyboard in Resources */,
 				4E65109725AE862E00F09093 /* Assets.xcassets in Resources */,
 				4E65109525AE862D00F09093 /* Main.storyboard in Resources */,
 			);
@@ -364,7 +399,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E65108E25AE862D00F09093 /* AppDelegate.swift in Sources */,
+				4E6511B425B12E1800F09093 /* ProgressDialogViewController.swift in Sources */,
+				4E65116825B007EB00F09093 /* MDCUtils.swift in Sources */,
+				4E6511C125B1367200F09093 /* UIUtils.swift in Sources */,
 				4E65109025AE862D00F09093 /* SceneDelegate.swift in Sources */,
+				4E65116325B0035800F09093 /* FormViewController.swift in Sources */,
+				4E65115E25AEA0BD00F09093 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

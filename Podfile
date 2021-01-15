@@ -9,5 +9,6 @@ target 'FormIOS' do
 
   #Library for save models in data base
   pod 'RealmSwift', "10.4.0"
-  pod 'MaterialComponents/TextControls+OutlinedTextFields', "119.5.0"
+  pod 'MaterialComponents/TextFields'
+  
 end

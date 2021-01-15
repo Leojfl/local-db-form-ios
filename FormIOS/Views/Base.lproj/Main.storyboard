@@ -2,22 +2,127 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Form View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormViewController" id="BYZ-38-t0r" customClass="FormViewController" customModule="FormIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3k-ZO-PWk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vva-4s-HVu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wHs-1i-Hqy">
+                                                <rect key="frame" x="30" y="40" width="354" height="299"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formulario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u46-fr-nrV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" name="StrongBlue"/>
+                                                        <color key="highlightedColor" name="StrongBlue"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="485-6F-Cfh" customClass="MDCTextFieldCustom" customModule="FormIOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="34" width="354" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido paterno" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7zg-CD-z7e" customClass="MDCTextFieldCustom" customModule="FormIOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="78" width="354" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido materno" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZr-Bi-8aS" customClass="MDCTextFieldCustom" customModule="FormIOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="122" width="354" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A6i-Gp-Y4C" customClass="MDCTextFieldCustom" customModule="FormIOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="166" width="354" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono celular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JvV-A6-v3Y" customClass="MDCTextFieldCustom" customModule="FormIOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="210" width="354" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    </textField>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8E-vC-s9O" customClass="MDCButtonCustom" customModule="FormIOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="249" width="354" height="45"/>
+                                                        <color key="backgroundColor" name="StrongBlue"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="ggb-1B-uge"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Cargar información anterior">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onClickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="21V-ns-tb3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGg-Av-CPE" customClass="MDCButtonCustom" customModule="FormIOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="254" width="354" height="45"/>
+                                                        <color key="backgroundColor" name="StrongBlue"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="A0G-gP-Ni0"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Guardar">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onClickSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WqR-Bq-ycg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="wHs-1i-Hqy" firstAttribute="top" secondItem="Vva-4s-HVu" secondAttribute="top" constant="40" id="piO-Fi-nXo"/>
+                                            <constraint firstAttribute="trailing" secondItem="wHs-1i-Hqy" secondAttribute="trailing" constant="30" id="sDw-QL-lqV"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wHs-1i-Hqy" secondAttribute="bottom" constant="20" id="wJy-pX-dim"/>
+                                            <constraint firstItem="wHs-1i-Hqy" firstAttribute="leading" secondItem="Vva-4s-HVu" secondAttribute="leading" constant="30" id="xzZ-dr-tKS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Vva-4s-HVu" firstAttribute="top" secondItem="b3k-ZO-PWk" secondAttribute="top" id="0Dh-QY-smD"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vva-4s-HVu" secondAttribute="bottom" id="Ezr-qn-ww9"/>
+                                    <constraint firstItem="Vva-4s-HVu" firstAttribute="leading" secondItem="b3k-ZO-PWk" secondAttribute="leading" id="eIA-SZ-PgH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vva-4s-HVu" secondAttribute="trailing" id="oYs-Le-O5i"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b3k-ZO-PWk" secondAttribute="bottom" id="0Ox-tP-Zui"/>
+                            <constraint firstItem="Vva-4s-HVu" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" priority="250" id="0xi-4J-fOX"/>
+                            <constraint firstItem="b3k-ZO-PWk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ebw-8X-zy3"/>
+                            <constraint firstItem="Vva-4s-HVu" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="RaG-Q9-rgL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b3k-ZO-PWk" secondAttribute="trailing" id="dty-0Y-ej9"/>
+                            <constraint firstItem="b3k-ZO-PWk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xJB-uB-Hhl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnLoadData" destination="V8E-vC-s9O" id="hZ2-bi-YrR"/>
+                        <outlet property="tfEmail" destination="A6i-Gp-Y4C" id="EjQ-Jb-tsB"/>
+                        <outlet property="tfLastName" destination="7zg-CD-z7e" id="lNk-8Q-DIk"/>
+                        <outlet property="tfName" destination="485-6F-Cfh" id="V4a-Fe-olg"/>
+                        <outlet property="tfPhone" destination="JvV-A6-v3Y" id="jUf-HE-AGC"/>
+                        <outlet property="tfSecondLastName" destination="tZr-Bi-8aS" id="la5-YV-GyB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,6 +130,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="StrongBlue">
+            <color red="0.019999999552965164" green="0.15999999642372131" blue="0.21799999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
