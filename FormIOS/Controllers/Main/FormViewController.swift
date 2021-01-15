@@ -14,7 +14,8 @@ class FormViewController: UIViewController {
     @IBOutlet weak var tfEmail: MDCTextFieldCustom!
     @IBOutlet weak var tfSecondLastName: MDCTextFieldCustom!
     @IBOutlet weak var tfPhone: MDCTextFieldCustom!
-    @IBOutlet weak var btnLoadData: MDCButtonCustom!
+    
+    @IBOutlet weak var btnShowUserList: MDCButtonCustom!
     
     private var lastUser: User?
     
@@ -24,14 +25,10 @@ class FormViewController: UIViewController {
         getLastUser()
     }
     
-    @IBAction func onClickAction(_ sender: Any) {
-        if let lastUser = lastUser {
-            tfName.text = lastUser.name
-            tfLastName.text = lastUser.lastName
-            tfEmail.text = lastUser.email
-            tfSecondLastName.text = lastUser.secondLastName
-            tfPhone.text = lastUser.phone
-        }
+    @IBAction func onClickShowList(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func onClickSave(_ sender: Any) {
@@ -54,7 +51,7 @@ class FormViewController: UIViewController {
                     if result {
                         message = "Información guardada correctamente"
                         title = "Correcto"
-                        self.btnLoadData.isHidden = false
+                        self.btnShowUserList.isHidden = false
                         self.clearTextFields()
                     }
                     UIUtils.showAlert(controller: self, title: title, message: message)
@@ -100,7 +97,7 @@ class FormViewController: UIViewController {
         User.getLastUser { lastUser in
             self.lastUser = lastUser
             if lastUser != nil {
-                self.btnLoadData.isHidden = false
+                self.btnShowUserList.isHidden = false
             }
         }
     }

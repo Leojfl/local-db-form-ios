@@ -18,7 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let vc = storyboard.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
             window = UIWindow(windowScene: windowScene)
             window?.makeKeyAndVisible()
-            window?.rootViewController = UINavigationController(rootViewController: vc)
+            let vcRoot = UINavigationController(rootViewController: vc)
+            window?.rootViewController = vcRoot
+            UIUtils.setupNavigationBar(vcRoot.navigationBar)
         }
     }
 

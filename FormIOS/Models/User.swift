@@ -37,5 +37,11 @@ class User: Object {
         completion(lastUser)
     }
     
+    public static func getUsers(completion: @escaping (_ data: [User]) -> Void) {
+        let realm = try! Realm()
+        let users = realm.objects(User.self).toArray(ofType: User.self)
+        completion(users)
+    }
+    
     
 }

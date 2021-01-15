@@ -64,11 +64,11 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="ggb-1B-uge"/>
                                                         </constraints>
-                                                        <state key="normal" title="Cargar información anterior">
+                                                        <state key="normal" title="Ver usuarios anteriores">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="onClickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="21V-ns-tb3"/>
+                                                            <action selector="onClickShowList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcK-nq-bI3"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGg-Av-CPE" customClass="MDCButtonCustom" customModule="FormIOS" customModuleProvider="target">
@@ -116,7 +116,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnLoadData" destination="V8E-vC-s9O" id="hZ2-bi-YrR"/>
+                        <outlet property="btnShowUserList" destination="V8E-vC-s9O" id="uB0-Q8-JQT"/>
                         <outlet property="tfEmail" destination="A6i-Gp-Y4C" id="EjQ-Jb-tsB"/>
                         <outlet property="tfLastName" destination="7zg-CD-z7e" id="lNk-8Q-DIk"/>
                         <outlet property="tfName" destination="485-6F-Cfh" id="V4a-Fe-olg"/>
@@ -127,6 +127,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="56"/>
+        </scene>
+        <!--User List View Controller-->
+        <scene sceneID="ZKm-lH-zh7">
+            <objects>
+                <viewController storyboardIdentifier="UserListViewController" id="tld-X2-ltM" customClass="UserListViewController" customModule="FormIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gPQ-bU-kDU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lista de usuarios " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veQ-HL-8Wy">
+                                <rect key="frame" x="20" y="64" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="StrongBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xRn-8s-mun">
+                                <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tNN-PI-ABe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tNN-PI-ABe" firstAttribute="bottom" secondItem="xRn-8s-mun" secondAttribute="bottom" id="3up-q6-xBq"/>
+                            <constraint firstItem="veQ-HL-8Wy" firstAttribute="top" secondItem="tNN-PI-ABe" secondAttribute="top" constant="20" id="DJX-J7-sso"/>
+                            <constraint firstItem="veQ-HL-8Wy" firstAttribute="leading" secondItem="tNN-PI-ABe" secondAttribute="leading" constant="20" id="KZ9-eh-dyE"/>
+                            <constraint firstItem="tNN-PI-ABe" firstAttribute="trailing" secondItem="xRn-8s-mun" secondAttribute="trailing" id="RiG-L7-BCm"/>
+                            <constraint firstItem="xRn-8s-mun" firstAttribute="leading" secondItem="tNN-PI-ABe" secondAttribute="leading" id="Rl6-bu-86L"/>
+                            <constraint firstItem="xRn-8s-mun" firstAttribute="top" secondItem="veQ-HL-8Wy" secondAttribute="bottom" constant="20" id="bv5-p5-fwn"/>
+                            <constraint firstItem="tNN-PI-ABe" firstAttribute="trailing" secondItem="veQ-HL-8Wy" secondAttribute="trailing" constant="20" id="dw1-Ky-bAC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="xRn-8s-mun" id="bfK-ih-oDX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sq-Hu-Ys1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847.82608695652175" y="63.616071428571423"/>
         </scene>
     </scenes>
     <resources>
